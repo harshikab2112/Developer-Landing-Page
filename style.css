@@ -1,0 +1,343 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8em;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+body {
+  padding-top: 56px;
+  scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav li a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+nav li a:hover {
+  background-color: #413a3a;
+}
+
+nav .active {
+  background-color: #0b0d2d;
+}
+
+/* Hero Section */
+.main .image {
+  background: url(./assets/hero-image.jpg) center/cover no-repeat fixed;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Text Overlay inside Hero Image */
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* optional dark background */
+  padding: 30px 40px;
+  border-radius: 12px;
+  max-width: 90%;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+  z-index: 1;
+}
+
+.overlay-text h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.overlay-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #8588b7;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0b0d2d;
+}
+
+/* Fade In Animation Keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* About Section */
+.about {
+  background-color: #0b0d2d;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.about h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.9;
+  word-spacing: 2px;
+}
+
+/* Services Section */
+.services {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px 20px;
+  background-color: rgb(190, 183, 200);
+}
+
+/* Individual Card Styles */
+.card {
+  background-color: rgb(11, 13, 45);
+  color: white;
+  width: 300px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Image inside cards */
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Heading and paragraph inside cards */
+.card-h {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.card-p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white;
+}
+
+/* Contact Section */
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #8588b7;
+  color: #fff;
+  gap: 10px;
+}
+
+.info {
+  max-width: 500px;
+  background-color: rgb(11, 13, 45);
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.info-h {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.info-p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.social-icon {
+  margin-top: 15px;
+}
+
+.social-icon a {
+  color: white;
+  font-size: 1.8rem;
+  margin-right: 15px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon i:hover {
+  transform: scale(1.3);
+  color: #8588b7;
+}
+
+.contact-image img {
+  height: 400px;
+  object-fit: contain;
+  max-width: 100%;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #0b0d2d;
+  color: white;
+  padding: 15px 10px;
+  font-size: 0.9rem;
+}
+
+/* Mobile (up to 600px) */
+@media (max-width: 600px) {
+  /* Navbar stack vertically */
+  ul {
+    flex-direction: column;
+  }
+
+  li a {
+    padding: 10px;
+  }
+
+  .overlay-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .overlay-text p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .about h2 {
+    font-size: 1.6rem;
+  }
+
+  .about p {
+    font-size: 0.95rem;
+  }
+
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .contact {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-image img {
+    height: 250px;
+    margin-top: 20px;
+  }
+
+  .info {
+    padding: 20px;
+  }
+
+  .info-h {
+    font-size: 1.6rem;
+  }
+
+  .info-p {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet (600px–900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .overlay-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .overlay-text p {
+    font-size: 1.1rem;
+  }
+
+  .card {
+    width: 45%;
+  }
+
+  .services {
+    justify-content: space-around;
+  }
+
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-image img {
+    height: 300px;
+  }
+}
