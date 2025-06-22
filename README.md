@@ -6,7 +6,7 @@ Designed to showcase your skills, services, and contact info in a clean, profess
 ---
 
 ## 📸 Live Preview
-[Preview]()
+[Preview](https://developer-landing-page-hb.vercel.app/)
 
 ---
 
